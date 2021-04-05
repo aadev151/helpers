@@ -17,6 +17,9 @@ To use the website, please follow [the link](https://helpers.pythonanywhere.com/
 ### If you are a developer...
 Simply follow [the link](https://helpers.pythonanywhere.com/en/developers), find a task which best matches you and perform it!
 
+## Coming soon...
+Now, I'm working on an iOS app. You will sure be able to discover it on App Store.
+
 ## Help
 If you need any help, please contact the developer ([feedback@rambler.ua](mailto:feedback@rambler.ua))
 
