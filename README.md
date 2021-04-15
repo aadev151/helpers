@@ -25,7 +25,6 @@ If you need any help, please contact the developer ([feedback@rambler.ua](mailto
 
 ## Donations
 I'm glad you are interested in my project and ready to donate. However, your money will do much more good if you donate to one of these organizations:
-Мы очень рады, что Вас заинтересовал наш проект и Вы готовы пожертвовать нам средства. Однако Ваш перевод принесет гораздо больше пользы одной из этих организаций:
 - [Welfare fund "Happy world"](https://blagotvoritelnyi-fond.ru/pay/)
 - [Charitable organization "Rainbow"](https://raduga-omsk.ru/how-to-help/?lang_ui=en)
 
