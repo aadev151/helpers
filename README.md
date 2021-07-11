@@ -29,4 +29,4 @@ I'm glad you are interested in my project and ready to donate. However, your mon
 - [Charitable organization "Rainbow"](https://raduga-omsk.ru/how-to-help/?lang_ui=en)
 
 ## License
-You can distribute and modify the source code with the permition of the developer. [License](https://github.com/aadev151/helpers/blob/main/LICENSE.md)
+You CANNOT do anything to this code, it belongs to the developer. [License](https://github.com/aadev151/helpers/blob/main/LICENSE.md)
