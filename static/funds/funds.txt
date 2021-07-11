@@ -1,0 +1,4 @@
+MYFUND|14|1
+Alex's Fund|1|0
+Фонд HELPERS|0|0
+Фонд 1|0|0

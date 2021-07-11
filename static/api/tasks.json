@@ -1,0 +1,114 @@
+{
+	"2": {
+		"fund": "Alex's Fund",
+		"info": "в Анапе ",
+		"name": "Принести игрушки фонду",
+		"number": "2",
+		"tags": "Анапа дети",
+		"url": "https://helpers.page/task/2"
+	},
+	"3": {
+		"fund": "MYFUND",
+		"info": "цпожп",
+		"name": "оецж",
+		"number": "3",
+		"tags": "толы",
+		"url": "https://helpers.page/task/3"
+	},
+	"4": {
+		"fund": "MYFUND",
+		"info": "api teest",
+		"name": "new task_test",
+		"number": "4",
+		"tags": "testoviy tags",
+		"url": "https://helpers.page/task/4"
+	},
+	"7": {
+		"fund": "MYFUND",
+		"info": "Нужно прийти на акцию в 19 часов 5 июня к памятнику Пушкина (г. Касимов)\r\nОбязательно с собой иметь паспорт",
+		"name": "Прийти на волонтёрскую акцию",
+		"number": "7",
+		"tags": "волонтерство акции касимов",
+		"url": "https://helpers.page/task/7"
+	},
+	"10": {
+		"number": "10",
+		"name": "тестовое задание",
+		"info": "тест для нового апи",
+		"tags": "апиииии",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/10"
+	},
+	"15": {
+		"number": "15",
+		"name": "hklj",
+		"info": "kl;kjk",
+		"tags": "jl hjlh lk",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/15"
+	},
+	"17": {
+		"number": "17",
+		"name": "ьл",
+		"info": "од",
+		"tags": "од",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/17"
+	},
+	"18": {
+		"number": "18",
+		"name": "kopek",
+		"info": "fw;f",
+		"tags": "fwf fw",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/18"
+	},
+	"19": {
+		"number": "19",
+		"name": "jjj",
+		"info": "jjj",
+		"tags": "kkk kkk",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/19"
+	},
+	"20": {
+		"number": "20",
+		"name": "Название задания",
+		"info": "",
+		"tags": "",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/20"
+	},
+	"21": {
+		"number": "21",
+		"name": "здорово",
+		"info": "здóрово или здорóво?",
+		"tags": "ха ха ха",
+		"fund": "MYFUND",
+		"url": "https://helpers.page/task/21"
+	},
+	"22": {
+		"number": "22",
+		"name": "||",
+		"info": "fel|ref",
+		"tags": "ref",
+		"fund": "MYFUND",
+		"url": "https://ru.hlprs.xyz/task/22"
+	},
+	"23": {
+		"number": "23",
+		"name": "reret",
+		"info": "reg",
+		"tags": "grtgGtr",
+		"fund": "MYFUND",
+		"url": "https://ru.hlprs.xyz/task/23"
+	},
+	"24": {
+		"number": "24",
+		"name": "аа",
+		"info": "",
+		"tags": "за",
+		"fund": "MYFUND",
+		"url": "https://ru.hlprs.xyz/task/24"
+	}
+}
