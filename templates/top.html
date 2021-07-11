@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %} Топ исполнителей | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Топ исполнителей</h1>
+
+<br>
+
+<div class="control has-icons-left">
+    <form action="/top" method="get">
+        <div class="search">
+            <input class="input is-large" style="align-left: 10%; align-right: 10%" placeholder="Поиск по заданиям..." name="query" value="{{query}}" list="tags" id="search" oninput="queryChanged()">
+            <span style="position: absolute; left: 1%;top: 17%;">
+                <span class="material-icons" style="color: grey; font-size: 37px;">
+                search
+                </span>
+            </span>
+        </div>
+    </form>
+</div>
+
+<br><br>
+
+<div style="text-align: center; margin-left: 10%; margin-right: 10%">
+    <table class="table is-striped" style="width: 100%">
+      <thead>
+        <tr>
+            <th>№</th>
+            <th>Пользователь</th>
+            <th>Выполненных заданий</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i, u in users %}
+            <tr>
+              <th>{{ i + 1 }}</th>
+                <td>@<a href="/user/{{u[2]}}" style="text-decoration: underline;">{{ u[2] }}</a></td>
+                <td>{{ u[0] }}</td>
+            </tr>
+        {% endfor %}
+        {% for u in users_match %}
+            <tr>
+              <th>{{ u[0] }}</th>
+                <td>@<a href="/user/{{u[1][2]}}" style="text-decoration: underline;">{{ u[1][2] }}</a></td>
+                <td>{{ u[1][0] }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %} HELPERS | Помоги тем, кто помогает {% endblock %}
+
+{% block content %}
+
+<h1 class="title">
+  HELPERS | Помоги тем, кто помогает
+</h1>
+<h2 class="subtitle">
+  Сообщество благотворительных фондов и неравнодушных людей
+</h2>
+<div style="text-alignment: center;">
+    <div class="field">
+        <div class="control" style="margin-left: 35%; margin-right: 35%;">
+            <a href="/login">
+                <button class="button " style="width: 100%; font-size: 19px;">
+                    Войти
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control" style="margin-left: 35%; margin-right: 35%;">
+            <a href="/signup">
+                <button class="button " style="width: 100%; font-size: 19px;">
+                    Регистрация
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control" style="margin-left: 35%; margin-right: 35%;">
+            <a href="/tasks">
+                <button class="button " style="width: 100%; font-size: 19px;">
+                    Для исполнителей
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control" style="margin-left: 35%; margin-right: 35%;">
+            <a href="/about">
+                <button class="button " style="width: 100%; font-size: 19px;">
+                    О нас
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; bottom: 0; left: 0; width: 100%; position: fixed">
+    Made with &#128151 by HELPERS
+</footer>
+
+{% endblock %}

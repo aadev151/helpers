@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %} Изменить задание | HELPERS {% endblock %}
+
+{% block content %}
+<h1 class="title">
+  Изменить задание "{{ name }}"
+</h1>
+<div style="text-alignment: center;">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+    <form action="?" method="post">
+        <label for="name">Название задания:</label>
+        <br>
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <input class="input is-large" style="width: 100%" name="name" id="name" value="{{name}}" placeholder="Название задания" required>
+            </div>
+        </div>
+        <br>
+        <label for="info">Описание задания:</label>
+        <br>
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <textarea class="textarea is-large" style="width: 100%" name="info" id="info" placeholder="Описание задания">{{ info }}</textarea>
+            </div>
+        </div>
+        <br>
+        <div style="text-alignment: left">
+            <a class="subtitle" style="margin-left: 0%">Теги (например: "сайт", "волонтерство", "пиар")</a>
+        </div>
+
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <input class="input is-large" style="width: 100%" name="tags" value="{{tags}}" placeholder="москва реклама продвижение">
+            </div>
+        </div>
+        <br>
+        <button class="button is-large" type="submit">Изменить!</button>
+    </form>
+</div>
+
+{% endblock %}

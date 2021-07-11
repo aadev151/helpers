@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">Какое задание выполнил пользователь?</h1>
+<div style="text-align: center; margin-left: 10%; margin-right: 10%">
+    <table class="table is-striped" style="width: 100%">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Название</th>
+          <th style="text-align: center;">Ссылка</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in tasks %}
+            <tr>
+                <td style="text-align: center;"><a href="/completed?performer={{performer}}&task={{t[1]}}" style="text-decoration: underline;">{{ t[0] }}</a></td>
+                <td style="text-align: center;"><a href="/task/{{t[1]}}" target="_blank" class="external"> </a></td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

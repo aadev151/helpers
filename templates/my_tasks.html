@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Мои задания | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Мои задания</h1>
+<div style="text-align: center; margin-left: 10%; margin-right: 10%">
+    <table class="table is-striped" style="width: 100%">
+      <thead>
+        <tr>
+          <th style="text-align: center;">№</th>
+          <th style="text-align: center;">Ссылка</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in tasks %}
+            <tr>
+              <th style="text-align: center;">{{ t[0] }}</th>
+                <td style="text-align: center;"><a href="{{ t[1][1] }}/manage" style="text-decoration: underline;">{{ t[1][0] }}</a></td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

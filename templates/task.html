@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Задание {{ number }} | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Задание {{ number }}</h1>
+<h1 class="title">{{ name }}</h1>
+<br>
+<h2 class="subtitle">
+    {% for line in info %}
+        {{ line }}
+        <br>
+    {% endfor %}
+</h2>
+<br>
+<h1 class="title">От фонда: <a href="/fund/{{fund}}" style="text-decoration: underline">{{ fund }}</a></h1>
+<h1><br></h1>
+<div class="tags">
+    {% for t in tags %}
+        <a href="/tasks?tags={{t}}">
+            <button class="button">{{ t }}</button>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+    {% endfor %}
+</div>
+<h1><br></h1>
+
+<a href="/messages?with={{fund_username}}&about={{number}}">
+    <button class="button is-large is-primary">Связаться с фондом</button>
+</a>
+
+{% endblock %}

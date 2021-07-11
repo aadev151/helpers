@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">{{ name }}</h1>
+<br>
+<h2 class="subtitle">
+    {% for line in info %}
+        {{ line }}
+        <br>
+    {% endfor %}
+</h2>
+<br><br>
+<a href="{{url}}/edit">
+    <button class="button is-primary">Изменить</button>
+</a>
+<br><br>
+<form action="{{url}}/delete" method="post">
+    <input type="submit" class="button is-danger" value=" Удалить " onclick="return confirm('Вы уверены, что Вы хотите удалить это задание?')">
+</form>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %} Мои сообщения | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Все сообщения</h1>
+
+<br>
+<div class="control has-icons-left">
+    <form action="/messages" method="get">
+        <input class="input is-large" style="align-left: 10%; align-right: 10%" placeholder="Поиск по сообщениям..." name="query" value="{{query}}">
+    </form>
+    <span style="position: absolute; left: 1%;top: 17%;">
+        <span class="material-icons" style="color: grey; font-size: 37px;">
+        search
+        </span>
+    </span>
+</div>
+
+<br><br>
+
+<div style="text-align: center; margin-left: 10%; margin-right: 10%">
+    <table class="table is-striped" style="width: 100%">
+      <thead>
+        <tr>
+            <th style="text-align: center;">Username</th>
+            <th style="text-align: center;">Задание</th>
+            <th style="text-align: center;">Непрочитанных</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in messages %}
+            <tr>
+                <td style="text-align: center;">@<a href="/messages?with={{ m[0] }}&about={{ m[1] }}" style="text-decoration: underline;">{{ m[0] }}</a></td>
+                <td style="text-align: center;"><a href="/task/{{ m[1] }}" style="text-decoration: underline;">{{ m[2] }}</a></td>
+                <td style="text-align: center;">{{ m[3] }}</td>
+                <td style="text-align: center;">
+                    <form action="/message/{{m[4]}}/delete" method="post" id="delete">
+                        <a class="delete-button" onclick="if (confirm('Вы уверены, что Вы хотите удалить эту переписку?')) { document.getElementById('delete').submit() }">
+                            <span class="material-icons" style="color: red;">
+                            delete
+                            </span>
+                        </a>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

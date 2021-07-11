@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    {{ error|safe }}
+</h1>
+
+<button class="button" onclick="window.history.back()">Назад</button>
+<h2>или</h2>
+<a href="mailto:vomisina.xela@gmail.com?subject={{mail}}">
+    <button class="button">Написать разработчику</button>
+</a>
+
+{% endblock %}

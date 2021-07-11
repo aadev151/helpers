@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %} Связаться с фондом {{ fund }} | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">По поводу какого задания Вы хотите связаться с фондом?</h1>
+<div style="text-align: center; margin-left: 10%; margin-right: 10%">
+    <table class="table is-striped" style="width: 100%">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Название</th>
+          <th style="text-align: center;">Ссылка</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for t in tasks %}
+            <tr>
+                {% if current_user.is_authenticated %}
+                    <td style="text-align: center;"><a href="/messages?with={{fund_username}}&about={{t[1]}}" style="text-decoration: underline;">{{ t[0] }}</a></td>
+                {% else %}
+                    <td style="text-align: center;"><a href="mailto:{{email}}?subject=Задание {{t[1]}} (&quot;{{t[0]}}&quot;)" style="text-decoration: underline;">{{ t[0] }}</a></td>
+                {% endif %}
+                <td style="text-align: center;"><a href="/task/{{t[1]}}" target="_blank" class="external"> </a></td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}

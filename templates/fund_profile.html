@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Личный профиль | HELPERS {% endblock %}
+
+{% block content %}
+<h1 class="title">
+  Добро пожаловать, {{name}}!
+</h1>
+<div style="text-alignment: center;">
+    <div class="field">
+        <div class="control" style="margin-left: 30%; margin-right: 30%;">
+            <a href="/create">
+                <button class="button is-large" style="width: 100%">
+                    Создать задание
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control" style="margin-left: 30%; margin-right: 30%;">
+            <a href="/my">
+                <button class="button is-large" style="width: 100%">
+                    Мои задания
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control" style="margin-left: 30%; margin-right: 30%;">
+            <a href="/messages#bottom">
+                <button class="button is-large" style="width: 100%">
+                    Сообщения&nbsp;&nbsp;
+                    {% if unread != 0 %}
+                        <span class="unread">&nbsp;{{ unread }}&nbsp;</span>
+                    {% endif %}
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

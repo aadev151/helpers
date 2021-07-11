@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<style>
+    .socialMedia {
+        display: inline-block;
+    }
+    .icon {
+        display: inline-block;
+        list-style-type: none;
+    }
+</style>
+
+{% block content %}
+<h1 class="title">
+    Успешно! Пользователь @<a href="{{url}}" class="link">{{ performer }}</a> выполнил задание {{ task }}!
+</h1>
+
+<ul class="socialMedia">
+    <li class="icon"><a href="https://wa.me/?text=Пользователь @{{performer}} выполнил мое задание! HELPERS - сообщество благотворительных фондов и неравнодушных людей (https://ru.hlprs.xyz)" target="_blank"><img src="/static/social/whatsapp.png" width="40"></a></li>
+    <li class="icon"><a href="https://t.me/share/url?url={{url}}&text=Пользователь @{{performer}} выполнил мое задание! HELPERS - сообщество благотворительных фондов и неравнодушных людей (https://ru.hlprs.xyz)" target="_blank"><img src="/static/social/telegram.png" width="40"></a></li>
+    <li class="icon"><a href="https://vk.com/share.php?url={{url}}" target="_blank"><img src="/static/social/vk.svg" width="40"></a></li>
+    <li class="icon"><a href="https://connect.ok.ru/offer?url={{url}}&title=Пользователь @{{performer}} выполнил мое задание! HELPERS - сообщество благотворительных фондов и неравнодушных людей (https://ru.hlprs.xyz)" target="_blank"><img src="/static/social/ok.svg" width="40"></a></li>
+    <li class="icon"><a href="https://www.facebook.com/sharer/sharer.php?u={{url}}" target="_blank"><img src="/static/social/facebook.png" width="40"></a></li>
+    <li class="icon"><a href="https://twitter.com/intent/tweet?text=Пользователь @{{performer}} выполнил мое задание! HELPERS - сообщество благотворительных фондов и неравнодушных людей (https://ru.hlprs.xyz)" target="_blank"><img src="/static/social/twitter.svg" width="40"></a></li>
+    <li class="icon"><a href="https://www.reddit.com/submit?url={{url}}&title=Пользователь @{{performer}} выполнил мое задание! HELPERS - сообщество благотворительных фондов и неравнодушных людей (https://ru.hlprs.xyz)" target="_blank"><img src="/static/social/reddit.png" width="40"></a></li>
+</ul>
+
+<a href="/profile">
+    <button class="button is-large">В личный кабинет</button>
+</a>
+
+{% endblock %}

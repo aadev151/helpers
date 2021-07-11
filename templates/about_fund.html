@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Фонд {{ name }} | HELPERS {% endblock %}
+
+{% block content %}
+
+<h1 class="title">{{ name }}</h1>
+<br>
+<h2 class="subtitle">Задач выложено: {{ posted }}</h2>
+<h2 class="subtitle">Выполненных задач: {{ performed }}</h2>
+<br>
+<a href="/tasks?from={{name}}">
+    <button class="button">Посмотреть задания от фонда</button>
+</a>
+
+{% if contact %}
+<br><br>
+<a href="{{url}}/contact">
+    <button class="button is-large is-primary">Связаться с фондом</button>
+</a>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %} Создать задание | HELPERS {% endblock %}
+
+{% block content %}
+<h1 class="title">
+  Создать задание для разработчика
+</h1>
+<h2 class="subtitle">
+    Это бесплатно!
+</h2>
+<div style="text-alignment: center;">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+    <form action="/create" method="post">
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <input class="input is-large" style="width: 100%" name="name" value="{{name}}" placeholder="Название задания" required>
+            </div>
+        </div>
+        <br>
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <textarea class="textarea is-large" style="width: 100%" name="info" placeholder="Описание задания">{{ info }}</textarea>
+            </div>
+        </div>
+        <br>
+        <div style="text-alignment: left">
+            <a class="subtitle" style="margin-left: 0%">Теги (например: "сайт", "приложение", "пиар")</a>
+            <a class="more" onclick="moremore()">Подробнее</a>
+        </div>
+
+        <div id="about" hidden style="margin-left: 20%; margin-right: 20%;">
+            <div class="notification is-primary">
+                <strong>Теги</strong> используются для поиска заданий исполнителями.
+                <br>
+                Теги состоят из 1 слова, вводятся в поле снизу через пробел.
+                <br>
+                <a href="/tags" target="_blank">Посмотрите</a> существующие теги
+            </div>
+            <br>
+        </div>
+
+        <div class="field">
+            <div class="control" style="margin-left: 20%; margin-right: 20%;">
+                <input class="input is-large" style="width: 100%" name="tags" value="{{tags}}" placeholder="сайт реклама продвижение">
+            </div>
+        </div>
+        <br>
+        <button class="button is-large" type="submit">Создать!</button>
+    </form>
+</div>
+
+<style>
+    .more {
+        text-decoration: underline;
+    }
+    .more:hover {
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    var h = true;
+
+    function moremore() {
+        document.getElementById('about').hidden = !h;
+        h = !h;
+    }
+    function over() {
+        document.getElementById('about').hidden = false;
+    }
+    function out() {
+        document.getElementById('about').hidden = true;
+    }
+</script>
+
+{% endblock %}

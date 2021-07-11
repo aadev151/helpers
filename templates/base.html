@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+    <link rel="manifest" href="/static/icons/site.webmanifest">
+    <link rel="shortcut icon" href="/static/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#904ff1">
+    <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>{% block title %} HELPERS {% endblock %}</title>
+    <style>
+        a.item-hover:hover {
+            background-color: #3fd96d;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight" style="background-color: #904FF1">
+
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+
+                    <div id="navbarMenuHeroA" class="navbar-menu is-active" style="background-color: #904FF1">
+                        <div class="navbar-end">
+                            {% if not current_user.is_authenticated %}
+                            <a href="/" class="item-hover navbar-item">
+                                Домой
+                            </a>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                            <a href="/profile" class="navbar-item item-hover">
+                                Профиль
+                            </a>
+                            {% endif %}
+                            {% if not current_user.is_authenticated %}
+                            <a href="/login" class="navbar-item item-hover">
+                                Вход
+                            </a>
+                            <a href="/signup" class="navbar-item item-hover">
+                                Регистрация
+                            </a>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                            <a href="/logout" class="navbar-item">
+                                Выход
+                            </a>
+                            {% endif %}
+                            <a href="/more" class="navbar-item">
+                                И ещё...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
