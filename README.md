@@ -1,3 +1,6 @@
+# The repository contains materials about the old version of the project [HelpUnicorn](https://github.com/aadev151/helpunicorn). It used to be named HELPERS
+## If you want to see the new version of the project, visit [GitHub](https://github.com/aadev151/helpunicorn) or the [official website](http://helpunicorn.ru)!
+
 # HELPERS
 
 HELPERS is a community of developers and welfare funds. Here you can ask for or rreceive help *absolutely for free*
